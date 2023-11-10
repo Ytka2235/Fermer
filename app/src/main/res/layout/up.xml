@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/master"
+    android:layout_gravity="top"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/but_back"
+        android:layout_width="wrap_content"
+        android:onClick="clickBack"
+        android:layout_height="wrap_content"
+        android:text="Назад" />
+
+    <TextView
+        android:id="@+id/text_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/text_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_up"
+        android:onClick="clickUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Усилить клик" />
+
+    <TextView
+        android:id="@+id/text_carrot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цена моркови 100 очков"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_carrot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_carrot"
+        android:text="Купить морковь" />
+
+    <TextView
+        android:id="@+id/text_cabbage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цена капусты 1000 очков"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/but_cabbage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_cabbage"
+        android:text="Купить капусту" />
+
+</LinearLayout>
+
