@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         txt.setText(power_click.toString());
     }
 
+
+
     // этот код выполняется когда закрывается дочерняя активити
 
     ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -71,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ImageView img = findViewById(R.id.imageView);
         img.setBackgroundResource(R.drawable.potato);
+        Button but = findViewById(R.id.but_back);
+        but.setEnabled(false);
         carrot_flag = false;
         cabbage_flag = false;
         setPower_click(1);
@@ -93,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
             position ++;
             ImageView img = findViewById(R.id.imageView);
             img.setBackgroundResource(R.drawable.cabbage);
+            Button but = findViewById(R.id.but_up);
+            but.setEnabled(false);
         }
 
         if(position == 1 & carrot_flag)
@@ -100,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
             position ++;
             ImageView img = findViewById(R.id.imageView);
             img.setBackgroundResource(R.drawable.carrot);
+            Button but = findViewById(R.id.but_back);
+            but.setEnabled(true);
         }
 
     }
@@ -112,12 +121,16 @@ public class MainActivity extends AppCompatActivity {
             position --;
             ImageView img = findViewById(R.id.imageView);
             img.setBackgroundResource(R.drawable.potato);
+            Button but = findViewById(R.id.but_back);
+            but.setEnabled(false);
         }
         if(position == 3 )
         {
             position --;
             ImageView img = findViewById(R.id.imageView);
             img.setBackgroundResource(R.drawable.carrot);
+            Button but = findViewById(R.id.but_up);
+            but.setEnabled(true);
         }
     }
     // переходит в дочернию активити и отправляет ей результаты
